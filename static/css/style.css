@@ -95,23 +95,26 @@ table{
     width:100%
         table-layout:fixed;
 }
-.table_header{
-    background-color:rgba(255,255,255,0.3);
-}
+
 .table_content{
-    height:300px;
+    height:700px;
     overflow-x: auto;
     margin-top:0px;
     border:1px solid rgba(255,255,255,0.3);
+    position:fixed;
+    left:200px;
 }
 th{
     padding:20px 15px;
     text-align:center;
+    vertical-align: middle;
     font-weight: 500;
     font-size;12px;
     font-style:bold;
     color:#fff;
     text-transform:uppercase;
+    background-color:rgba(255,255,255,0.3);
+
 }
 td{
     padding:15px;
