@@ -6,10 +6,10 @@
 {% block title %}<title>Store</title>{% endblock %}</head>
 <body>
 {% block content %}
-        <div class="orta">
+
 
             <div class="table_header">
-                    <table cellpadding="0" cellspacing ="0" border="0">
+                    <table cellpadding="50" cellspacing ="0" border="0">
                         <thead>
                             <tr>
                     <th>Name</th>
@@ -24,20 +24,22 @@
                 <div class="table_content">
                     <table cellpadding="0" cellspacing="30" border="0">
                     <tbody>
-                         <tr>
-                        <td>asd</td>
-                        <td>asd</td>
-                        <td>asd</td>
-                        <td>asd</td>
-                        <td>asd</td>
+                    {% for i in data %}
+                    <tr>
+                        <td>{{ i.Name }}</td>
+                        <td>{{ i.Platform }}</td>
+                        <td>{{ i.Year }}</td>
+                        <td>{{ i.Genre }}</td>
+                        <td>{{ i.Publisher }}</td>
                     </tr>
+                    {% endfor %}
                     </tbody>
                     </table>
 
 
 
                     </div>
-                   </div>
+
 
 
         {% endblock %}
