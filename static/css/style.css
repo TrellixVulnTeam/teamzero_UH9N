@@ -83,3 +83,9 @@ footer{
     bottom:0px;
     background-color:#222;
 }
+.orta{
+    position:fixed;
+    top:250px;
+    left:620px;
+    font-size:100pt;
+}
