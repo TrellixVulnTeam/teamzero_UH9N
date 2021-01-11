@@ -1,6 +1,5 @@
-<style>
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
-</style>
+
 font-family: 'Open Sans', sans-serif;
 
 header{
@@ -14,8 +13,7 @@ body {
     font-family:sans-serif;
     font-size:14px;
         margin:0px;
-    background:-webkit-linear-gradient(left, #9966ff,#ff66cc );
-    background:linear-gradient:(to right,#9966ff,#ff66cc );
+    background: linear-gradient(to right, #9966ff 0%, #ff66cc 100%);
     font-family:'Roboto',sans-serif;
 }
 .navigation{
