@@ -76,3 +76,10 @@ height:70px;
     border-bottom:1px solid #cc181e;
 
 }
+footer{
+    width:100%;
+    height:60px;
+    position:absolute;
+    bottom:0px;
+    background-color:#222;
+}
