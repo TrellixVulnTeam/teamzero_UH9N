@@ -23,11 +23,17 @@ def all_games(request):
         context={'data':allData}
     return render(request,"all_games.html",context)
 
+def game(request):
+    return render(request, "game.html")
+
 def search(request):
     query=request.GET.get('q','')
     if query:
         queryset=(Q(Games.Name__contains==query))
         results = allData.objects.filter(queryset).distinct()
 
+
+
     return render(request,'search.html',{'results':results,'query':query})
+
 

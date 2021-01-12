@@ -1,7 +1,7 @@
 
 from django.contrib import admin
 from django.urls import path
-from store.views import homepage,account,about_us,all_games,contact,search
+from store.views import homepage,account,about_us,all_games,contact,search,game
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('contact/',contact),
@@ -10,4 +10,6 @@ urlpatterns = [
     path('all_games/',all_games),
     path('homepage/',homepage),
     path('search/',search),
+    path('all_games/game/',game)
+    
 ]
