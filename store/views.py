@@ -1,5 +1,7 @@
 from django.shortcuts import render, HttpResponse, HttpResponseRedirect
 import pandas as pd
+from django.db.models import Q
+from store.models import Games
 
 def homepage(request):
     return render(request,"homepage.html")
@@ -20,4 +22,12 @@ def all_games(request):
         allData.append(dict(temp))
         context={'data':allData}
     return render(request,"all_games.html",context)
+
+def search(request):
+    query=request.GET.get('q','')
+    if query:
+        queryset=(Q(Games.Name__contains==query))
+        results = allData.objects.filter(queryset).distinct()
+
+    return render(request,'search.html',{'results':results,'query':query})
 

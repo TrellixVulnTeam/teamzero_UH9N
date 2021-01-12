@@ -37,7 +37,10 @@ body {
 .navigation2 li{
     display:inline-block
 }
-.navigation2 li a{ color:#666 text-decoration: none;padding-bottom:5px}
+.navigation2 li a{
+    color:#666 text-decoration: none;
+    padding-bottom:5px;
+}
 .navigation2 li a:hover{border-bottom:2px solid #cc181e;color:#000}
 .position1 {position:fixed;
 top:50px;
