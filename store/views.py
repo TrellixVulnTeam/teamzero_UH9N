@@ -5,10 +5,10 @@ from store.models import Games
 
 def homepage(request):
     return render(request,"homepage.html")
-def account(request):
+def graph(request):
 
 
-    return render(request,"account.html")
+    return render(request, "graph.html")
 def about_us(request):
     return render(request,"about_us.html")
 def contact(request):
@@ -23,8 +23,7 @@ def all_games(request):
         context={'data':allData}
     return render(request,"all_games.html",context)
 
-def game(request):
-    return render(request, "game.html")
+
 
 def search(request):
     query=request.GET.get('q','')
