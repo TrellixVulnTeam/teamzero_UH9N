@@ -24,15 +24,3 @@ def all_games(request):
     return render(request,"all_games.html",context)
 
 
-
-def search(request):
-    query=request.GET.get('q','')
-    if query:
-        queryset=(Q(Games.Name__contains==query))
-        results = allData.objects.filter(queryset).distinct()
-
-
-
-    return render(request,'search.html',{'results':results,'query':query})
-
-

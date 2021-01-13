@@ -31,7 +31,11 @@
                     <th>Year</th>
                     <th>Genre</th>
                     <th>Publisher</th>
-
+                    <th>NA Sales</th>
+                    <th>EU Sales</th>
+                    <th>JP Sales</th>
+                    <th>Other Sales</th>
+                    <th>Global Sales</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -42,6 +46,11 @@
                         <td>{{ i.Year }}</td>
                         <td>{{ i.Genre }}</td>
                         <td>{{ i.Publisher }}</td>
+                        <td>{{ i.NA_Sales }}</td>
+                        <td>{{ i.EU_Sales }}</td>
+                        <td>{{ i.JP_Sales }}</td>
+                        <td>{{ i.Other_Sales }}</td>
+                        <td>{{ i.Global_Sales }}</td>
                     </tr>
                     {% endfor %}
                     </tbody>

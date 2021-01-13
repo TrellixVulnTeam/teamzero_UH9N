@@ -42,10 +42,11 @@ body {
     padding-bottom:5px;
 }
 .navigation2 li a:hover{border-bottom:2px solid #cc181e;color:#000}
-.position1 {position:fixed;
-top:50px;
-left:450px;
-z-index:2;}
+.position1 {
+    position:fixed;
+    top:50px;
+    left:700px;
+    z-index:2;}
 
 header{width:100%;
 position:fixed;
@@ -104,8 +105,6 @@ table{
     overflow-x: auto;
     margin-top:0px;
     border:1px solid rgba(255,255,255,0.3);
-    position:fixed;
-    left:200px;
 }
 th{
     padding:20px 15px;
