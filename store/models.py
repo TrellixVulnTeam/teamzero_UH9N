@@ -1,18 +1,20 @@
 from django.db import models
 
 class Games(models.Model):
-    Rank = models.IntegerField()
-    Name = models.CharField(max_length=50)
-    Platform = models.CharField(max_length=60)
-    Year = models.IntegerField()
-    Genre = models.CharField(max_length=50)
-    Publisher = models.CharField(max_length=50)
-    NA_Sales = models.IntegerField()
-    EU_Sales = models.IntegerField()
-    JP_Sales = models.IntegerField()
-    Other_Sales = models.IntegerField()
-    Global_Sales = models.IntegerField()
+    rank = models.IntegerField()
+    name = models.CharField(max_length=50)
+    platform = models.CharField(max_length=60)
+    year = models.IntegerField(default=None)
+    genre = models.CharField(max_length=50)
+    publisher = models.CharField(max_length=50)
+    NA_Sales = models.IntegerField(default=None)
+    EU_Sales = models.IntegerField(default=None)
+    JP_Sales = models.IntegerField(default=None)
+    Other_Sales = models.IntegerField(default=None)
+    Global_Sales = models.IntegerField(default=None)
 
+    def __str__(self):
+        return self.Name
 class contact(models.Model):
     email = models.EmailField()
     message = models.CharField(max_length=400)
