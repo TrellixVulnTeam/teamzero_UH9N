@@ -23,51 +23,51 @@ def contact(request):
 
     return render(request,"contact.html")
 def all_games(request):
-    df = pd.read_csv("static/data.csv", header=0)
-    df.columns=['Rank','Name','Platform','Year','Genre','Publisher','NA_Sales','EU_Sales','JP_Sales','Other_Sales','Global_Sales']
+    df1 = pd.read_csv("static/data.csv", header=0)
+    df1.columns=['Rank','Name','Platform','Year','Genre','Publisher','NA_Sales','EU_Sales','JP_Sales','Other_Sales','Global_Sales']
     allData=[]
-    for i in range(df.shape[0]):
-        temp=df.loc[i]
+    for i in range(df1.shape[0]):
+        temp=df1.loc[i]
         allData.append(dict(temp))
         context={'data':allData}
     return render(request,"all_games.html",context)
 
 def plot1(request):
-    df = pd.read_csv("static/data.csv", header=0)
-    df.columns = ['Rank', 'Name', 'Platform', 'Year', 'Genre', 'Publisher', 'NA_Sales', 'EU_Sales', 'JP_Sales',
+    df2 = pd.read_csv("static/data.csv", header=0)
+    df2.columns = ['Rank', 'Name', 'Platform', 'Year', 'Genre', 'Publisher', 'NA_Sales', 'EU_Sales', 'JP_Sales',
                   'Other_Sales', 'Global_Sales']
     allData = []
-    for i in range(df.shape[0]):
-        temp = df.loc[i]
+    for i in range(df2.shape[0]):
+        temp = df2.loc[i]
         allData.append(dict(temp))
         context = {'data': allData}
-    fig = px.pie(df, values='Global_Sales', names='Platform', title='Total Global Sales for Each Platform')
+    fig = px.pie(df2, values='Global_Sales', names='Platform', title='Total Global Sales for Each Platform')
     fig.show()
     return render(request,"graph.html",context)
 
 def plot2(request):
-    df = pd.read_csv("static/data.csv", header=0)
-    df.columns = ['Rank', 'Name', 'Platform', 'Year', 'Genre', 'Publisher', 'NA_Sales', 'EU_Sales', 'JP_Sales',
+    df3 = pd.read_csv("static/data.csv", header=0)
+    df3.columns = ['Rank', 'Name', 'Platform', 'Year', 'Genre', 'Publisher', 'NA_Sales', 'EU_Sales', 'JP_Sales',
                   'Other_Sales', 'Global_Sales']
     allData = []
-    for i in range(df.shape[0]):
-        temp = df.loc[i]
+    for i in range(df3.shape[0]):
+        temp = df3.loc[i]
         allData.append(dict(temp))
         context = {'data': allData}
-    fig = px.pie(df, values='Global_Sales', names='Year', title='Total Global Sales for Each Year')
+    fig = px.pie(df3, values='Global_Sales', names='Year', title='Total Global Sales for Each Year')
     fig.show()
     return render(request,"graph.html",context)
 
 def plot3(request):
-    df = pd.read_csv("static/data.csv", header=0)
-    df.columns = ['Rank', 'Name', 'Platform', 'Year', 'Genre', 'Publisher', 'NA_Sales', 'EU_Sales', 'JP_Sales',
+    df4 = pd.read_csv("static/data.csv", header=0)
+    df4.columns = ['Rank', 'Name', 'Platform', 'Year', 'Genre', 'Publisher', 'NA_Sales', 'EU_Sales', 'JP_Sales',
                   'Other_Sales', 'Global_Sales']
     allData = []
-    for i in range(df.shape[0]):
-        temp = df.loc[i]
+    for i in range(df4.shape[0]):
+        temp = df4.loc[i]
         allData.append(dict(temp))
         context = {'data': allData}
-    fig = px.pie(df, values='Global_Sales', names='Genre', title='Total Global Sales for Each Genre')
+    fig = px.pie(df4, values='Global_Sales', names='Genre', title='Total Global Sales for Each Genre')
     fig.show()
     return render(request,"graph.html",context)
 
