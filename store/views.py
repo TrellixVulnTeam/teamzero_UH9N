@@ -71,4 +71,3 @@ def plot3(request):
     fig.show()
     return render(request,"graph.html",context)
 
-
