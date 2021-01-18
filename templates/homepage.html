@@ -8,6 +8,7 @@
 <meta name="keywords" content="games,store">
 <meta name="description" content="Let the journey begin!">
 <link rel="stylesheet" type="text/css" href="{% static '/css/style.css'  %}">
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 </head>
 <style>
 body {
@@ -17,14 +18,17 @@ body {
 <body>
     <header><div class="container">
         <div class="search">
-        <input class="search1"  placeholder="Search for a game">
 
-                </div>
-        </header>
+        <form class="search1"  action="/search/" method="get">
+            <input placeholder="Search for a game" type="text" name="q">
+            <input type="submit" value="Search">
+        </form>
+        </div>
+    </header>
 
     <div class="position1">
      <h1>  <ul class="navigation">
-    <li><a href="/homepage"style="text-decoration: none;" >Homepage</a></li>
+    <li><a href="http://127.0.0.1:8000/"style="text-decoration: none;" >Homepage</a></li>
     <li><a href="/all_games"style="text-decoration: none;">Store</a></li>
     <li><a href="/graph"style="text-decoration: none;">Graph</a></li>
     <li><a href="/about_us"style="text-decoration: none;">About Us</a></li>
@@ -33,7 +37,7 @@ body {
            </div>
     {% block content %}
 <div class="orta">
-        <p>WELCOME</p>
+        <p >TEAM ZERO</p>
         </div>
 
         {% endblock %}

@@ -45,7 +45,7 @@ body {
 .position1 {
     position:fixed;
     top:50px;
-    left:700px;
+    left:400px;
     z-index:2;}
 
 header{width:100%;
@@ -92,7 +92,7 @@ footer{
     position:fixed;
     top:250px;
     left:620px;
-    font-size:12pt;
+    font-size:36pt;
     font-weight:bolder;
 }
 table{

@@ -13,4 +13,10 @@ class Games(models.Model):
     Other_Sales = models.IntegerField()
     Global_Sales = models.IntegerField()
 
+class contact(models.Model):
+    email = models.EmailField()
+    message = models.CharField(max_length=400)
+
+    def __str__(self):
+        return self.email + ' ' +self.message
 
