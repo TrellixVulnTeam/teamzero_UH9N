@@ -14,7 +14,7 @@ class Games(models.Model):
     Global_Sales = models.IntegerField(default=None)
 
     def __str__(self):
-        return self.Name
+        return self.name
 class contact(models.Model):
     email = models.EmailField()
     message = models.CharField(max_length=400)
